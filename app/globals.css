@@ -1,6 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/rogue-hero');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -31,3 +34,28 @@ body {
     text-wrap: balance;
   }
 }
+
+.shadow-top-bottom {
+  position: relative;
+}
+
+.shadow-top-bottom::before,
+.shadow-top-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px; /* Adjust height for shadow thickness */
+  
+}
+
+.shadow-top-bottom::before {
+  top: 1px; /* Position the top shadow */
+  box-shadow: 0 -2px 10px rgb(255, 255, 255);
+}
+
+.shadow-top-bottom::after {
+  bottom: 1px; /* Position the bottom shadow */
+  box-shadow: 0 2px 10px rgb(255, 255, 255);
+}
+
