@@ -6,6 +6,8 @@ import TEA from './components/TEA';
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import { NavBar } from "./components/NavBar";
+import CastList from "./components/CastList";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   return (
@@ -32,6 +34,8 @@ export default function Home() {
           </div>
           <ClipDandW />
           <TEA />
+          <CastList />
+          <Gallery />
         </div>
       </main>
       <Footer />
