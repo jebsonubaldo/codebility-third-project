@@ -1,25 +1,26 @@
 import React from 'react';
+import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/20/solid';
 
 const people = [
     {
         name: 'Ryan Reynolds',
         character: 'Wade Wilson',
-        source: '/assets/images/wade.jpg'
+        source: '/images/wade.jpg'
     },
     {
         name: 'Hugh Jackman',
         character: 'Logan',
-        source: '/assets/images/logan.jpg'
+        source: '/images/logan.jpg'
     },
     {
         name: 'Emma Corrin',
         character: 'Cassandra Nova',
-        source: '/assets/images/cassandra.jpg'
+        source: '/images/cassandra.jpg'
     },
     {
         name: 'Dafne Keen',
         character: 'Laura',
-        source: '/assets/images/laura.jpg'
+        source: '/images/laura.jpg'
     },
 ];
 
@@ -53,6 +54,76 @@ export default function CastList() {
                     ))}
                 </ul>
             </div>
+
+            <div className="mx-auto max-w-lg text-center">
+                <nav className="flex items-center justify-between px-4 sm:px-0">
+                    <div className="-mt-px flex w-0 flex-1">
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" />
+                            <img src="/images/spiderman-icon.png" alt="Spiderman Icon" />
+                        </a>
+                    </div>
+                    <div className="hidden md:-mt-px md:flex">
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            1
+                        </a>
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-[#890116] px-4 pt-4 text-sm font-medium text-[#890116]"
+                            aria-current="page"
+                        >
+                            2
+                        </a>
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            3
+                        </a>
+                        <span className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">
+                            ...
+                        </span>
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            8
+                        </a>
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            9
+                        </a>
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            10
+                        </a>
+                    </div>
+                    <div className="-mt-px flex w-0 flex-1 justify-end">
+                        <a
+                            href="#"
+                            className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        >
+                            <img src="/images/spiderman-icon.png" alt="Spiderman Icon" />
+                            <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <img
+          src="/images/deadpool-decor.png"
+          alt="Decorative Image"
+          className="absolute bottom-0 right-0 w-560 h-18"
+        />
         </div>
 
     );

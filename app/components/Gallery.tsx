@@ -3,19 +3,19 @@ import React from 'react';
 const files = [
     {
         title: 'IMG_4985.HEIC',
-        source: '/assets/images/gallery-1.png'
+        source: '/images/gallery-1.png'
     },
     {
         title: 'IMG_4985.HEIC',
-        source: '/assets/images/gallery-2.png'
+        source: '/images/gallery-2.png'
     },
     {
         title: 'IMG_4985.HEIC',
-        source: '/assets/images/gallery-3.png'
+        source: '/images/gallery-3.png'
     },
     {
         title: 'IMG_4985.HEIC',
-        source: '/assets/images/gallery-4.png'
+        source: '/images/gallery-4.png'
     },
 ];
 
