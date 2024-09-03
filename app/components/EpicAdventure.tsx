@@ -5,7 +5,9 @@ export default function EpicAdventure() {
   return (
     <div className="relative flex flex-col mt-20">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl tracking-tight text-white sm:text-5xl" >Epic Adventure</h2>
+        <h2 className="text-4xl tracking-tight text-white sm:text-5xl">
+          The Epic Adventure
+        </h2>
       </div>
       <div className="flex flex-row">
         <div className="w-[676px] p-6 mt-44 ml-24 leading-9 font-normal">
@@ -23,7 +25,6 @@ export default function EpicAdventure() {
           >
             Explore the multiverse
           </a>
-
         </div>
         <Image
           src={'/img/content-3-img/comic.png'}

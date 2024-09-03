@@ -19,10 +19,6 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        custom: ["Inter", 'sans-serif'],
-        rogueFont: [ "Rogue Hero", 'sans-serif']
-      },
       screens: {
         'xs' : '480px',
         'sm': '640px',
