@@ -16,9 +16,14 @@ export default function EpicAdventure() {
             anti-heroes in a thrilling and unpredictable journey that will test
             their limits and redefine their legacies.
           </p>
-          <button className="bg-customRed rounded-[40px] p-4 text-lg font-bold mt-11">
+
+          <a
+            href="#"
+            className="text-center mt-12 inline-block w-54 rounded-full bg-[#890116] px-8 py-3 text-base font-medium text-white hover:bg-[#a30a1e]"
+          >
             Explore the multiverse
-          </button>
+          </a>
+
         </div>
         <Image
           src={'/img/content-3-img/comic.png'}

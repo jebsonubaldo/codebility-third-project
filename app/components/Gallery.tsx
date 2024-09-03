@@ -56,7 +56,6 @@ export default function Gallery() {
                 >
                     Visit Gallery
                 </a>
-
             </div>
         </div>
 
