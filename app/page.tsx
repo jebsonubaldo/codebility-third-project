@@ -1,18 +1,18 @@
 import Image from 'next/image';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Icon from './components/content-1-icon';
 import Iframe from './components/youtube-iframe';
 import ClipDandW from './components/imageClip';
 import TEA from './components/TEA';
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import { NavBar } from "./components/NavBar";
 import CastList from "./components/CastList";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <Hero />
       <main className="flex items-center justify-center">
         <div className="w-[1440px]">
@@ -34,10 +34,10 @@ export default function Home() {
           </div>
           <ClipDandW />
           <TEA />
-          <CastList />
-          <Gallery />
         </div>
       </main>
+      <CastList />
+      <Gallery />
       <Footer />
     </>
   );
