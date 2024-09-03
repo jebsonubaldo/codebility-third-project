@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function ClipDandW() {
+export default function Banner() {
   return (
     <div className="flex flex-col h-[445px] relative mt-10 pt-96 overflow-hidden">
       <div className="absolute -bottom-36 left-0">

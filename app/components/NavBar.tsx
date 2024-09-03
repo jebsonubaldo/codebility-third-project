@@ -7,7 +7,7 @@ import burgerMenu from "../../public/hamburger-menu.svg";
 import assets from "../assets/assets";
 
 
-export function Navbar() {
+export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <>
@@ -92,5 +92,3 @@ export function Navbar() {
     </>
   );
 }
-
-export default Navbar;

@@ -19,7 +19,7 @@ const files = [
     },
 ];
 
-function Gallery() {
+export default function Gallery() {
     return (
         <div className="px-6 py-24 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
@@ -64,5 +64,3 @@ function Gallery() {
 
     );
 }
-
-export default Gallery;
