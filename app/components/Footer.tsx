@@ -5,24 +5,24 @@ import assets from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div className='bg-[#000000] flex justify-center items-center p-[64px]'>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-[24px] p-[48px] rounded-[14px] border-2 border-[#890116]">
-            <div className="col-span-1 flex flex-col gap-[12px] p-[40px]">
-                <div className="">
-                    <Image src={assets.navLogo} alt="" />
+    <div className='bg-[#000000] flex justify-center items-center lg:p-[64px] 2xs:p-[20px] '>
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-[24px] lg:p-[48px] 2xs:p-[20px] rounded-[14px] border-2 border-[#890116] ">
+            <div className="col-span-1 flex flex-col gap-[12px] lg:p-[40px] 2xs:p-0 tablet:px-[70px]">
+                <div className="flex lg:justify-start xs:justify-center  2xs:justify-center ">
+                    <Image className='' src={assets.navLogo} alt="" />
                 </div>
                 <div className="">
                     <p className='text-white'>Join our newsletter to stay up to date on features and releases.</p>
                 </div>
                 <div className="sm:flex">
-                    <input type="text" placeholder='Enter your email' className='focus:outline-[#890116] focus:border-none placeholder:font-custom h-[37px] w-[75%] mr-[5px]'/>
+                    <input type="text" placeholder='Enter your email' className='focus:outline-[#890116] focus:border-none placeholder:font-custom h-[37px] w-[75%] mr-[5px] xs:w-[58%] tablet:w-[75%] 2xs:w-full'/>
                     <button className="py-[7px] px-[13px] bg-[#890116] text-white">Subscribe</button>
                 </div>
                 <div className="text-white">
-                    <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+                    <p className='text-balance tablet:whitespace-normal'>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
                 </div>
             </div>
-            <div className="col-span-1 grid grid-cols-3 gap-[40px] flex ">
+            <div className="col-span-1 grid lg:grid-cols-3 tablet:grid-cols-3 xs:grid-cols-2 2xs:grid-cols-1 justify-items-center gap-[40px]  ">
                 <div className="col-span-1 ">
                     <h3 className='text-white my-4'>Column One</h3>
                     <ul>
@@ -44,9 +44,9 @@ const Footer = () => {
                     </ul>
                 </div>
              
-                <div className="col-span-1 items-start">
+                <div className="col-span-1 items-start flex-1">
                     <h3 className='text-white my-4'>Follow Us</h3>
-                    <ul>
+                    <ul className=''>
                         <li className='my-2'>
                             <p><a href=""><Image className='inline mr-3' src={assets.footerFacebook} alt=''/> <span className='text-white'>Facebook</span></a></p>
                         </li>
