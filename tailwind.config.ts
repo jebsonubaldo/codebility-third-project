@@ -20,19 +20,22 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'xxs' : '320px',
-        'xs' : '480px',
-        'sm': '640px',
+
+        "2xs": "360px",
+        xs: "480px",
+        sm: "640px",
+
         // => @media (min-width: 640px) { ... }
-  
-        'md': '1024px',
+        tablet: "810px",
+        md: "1024px",
         // => @media (min-width: 1024px) { ... }
-  
-        'lg': '1280px',
+
+        lg: "1280px",
+        xl :'1440px',
+        '2xl': "1920px"
         // => @media (min-width: 1280px) { ... }
       },
     },
-   
   },
   plugins: [],
 };
