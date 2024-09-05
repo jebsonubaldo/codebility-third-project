@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import assets from "../assets/assets";
 
 
-export function NavBar() {
+export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <>
@@ -90,5 +90,3 @@ export function NavBar() {
     </>
   );
 }
-
-export default NavBar;
