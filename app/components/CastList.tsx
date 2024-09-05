@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/20/solid';
 
 const people = [
@@ -35,7 +36,6 @@ export default function CastList() {
         setCurrentIndex(index);
     };
 
-
     const currentItems = people.slice(currentIndex, currentIndex + VISIBLE_ITEMS);
 
     return (
@@ -51,19 +51,22 @@ export default function CastList() {
                 <ul role="list" className="flex space-x-8">
                     {currentItems.map((person, index) => (
                         <li key={index} className="flex-none w-52 relative">
-                        <div className="relative">
-                            <img
-                                className="h-80 w-full rounded-2xl object-cover"
-                                src={person.source}
-                                alt={person.character}
-                            />
-                            <div className="text-center absolute inset-x-0 bottom-0 flex flex-col justify-end p-4 rounded-b-2xl bg-gradient-to-t from-black/100 to-transparent">
-                                <span className="text-white text-lg font-bold">{person.name}</span>
-                                <span className="text-gray-300 text-md">{person.character}</span>
-                            </div>
-                        </div>
-                    </li>
-                    
+                            <motion.div 
+                                className="relative"
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <img
+                                    className="h-80 w-full rounded-2xl object-cover"
+                                    src={person.source}
+                                    alt={person.character}
+                                />
+                                <div className="text-center absolute inset-x-0 bottom-0 flex flex-col justify-end p-4 rounded-b-2xl bg-gradient-to-t from-black/100 to-transparent">
+                                    <span className="text-white text-lg font-bold">{person.name}</span>
+                                    <span className="text-gray-300 text-md">{person.character}</span>
+                                </div>
+                            </motion.div>
+                        </li>
                     ))}
                 </ul>
             </div>
