@@ -39,7 +39,7 @@ export default function CastList() {
     const currentItems = people.slice(currentIndex, currentIndex + VISIBLE_ITEMS);
 
     return (
-        <div className="relative px-6 py-24 sm:py-32 lg:px-8">
+        <div className="bg-black relative px-6 py-24 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
                 <h3 className="mt-2 text-xl tracking-tight text-white">Full Cast & Crew of</h3>
                 <h2 className="text-4xl tracking-tight text-white sm:text-5xl mt-2">
@@ -48,7 +48,8 @@ export default function CastList() {
             </div>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 my-20">
-                <ul role="list" className="flex space-x-8">
+                {/* Adjust the ul to handle mobile scrolling */}
+                <ul role="list" className="flex space-x-8 overflow-x-auto sm:overflow-visible pb-6">
                     {currentItems.map((person, index) => (
                         <li key={index} className="flex-none w-52 relative">
                             <motion.div 
