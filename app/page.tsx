@@ -11,27 +11,16 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Navbar />
       <Hero />
-      <main className="flex items-center justify-center">
-        <div className="w-[1440px]">
-          <Image
-            src="/img/content-1-img/deadpool.png"
-            width={397}
-            height={171}
-            alt="Marvel Jesus"
-          />
-
-          <Partnership />
-          <Trailer />
-          <Banner />
-          <EpicAdventure />
-        </div>
-      </main>
+      <Partnership />
+      <Trailer />
+      <Banner />
+      <EpicAdventure />
       <CastList />
       <Gallery />
       <Footer />
-    </>
+    </main>
   );
 }
