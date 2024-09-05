@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Partnership from './components/Partnership';
 import Trailer from './components/Trailer';
@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <main className="flex items-center justify-center">
         <div className="w-[1440px]">
@@ -28,10 +28,10 @@ export default function Home() {
           <Banner />
           <EpicAdventure />
         </div>
-      </main>
+      </main> */}
       <CastList />
       <Gallery />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
