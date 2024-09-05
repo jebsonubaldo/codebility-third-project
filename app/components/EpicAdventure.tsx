@@ -10,7 +10,7 @@ export default function EpicAdventure() {
         </h2>
       </div>
       <div className="flex flex-col md:flex-row">
-        <div className="lg:w-[676px] p-6 lg:mt-44 leading-9 font-normal border border-red-700">
+        <div className="lg:w-[676px] p-6 lg:mt-44 leading-9 font-normal">
           <p className="sm:text-xl md:text-2xl font-normal">
             In Deadpool X Wolverine, the merc with a mouth teams up with the
             clawed mutant in an adventure like no other. With action, humor, and
@@ -30,7 +30,7 @@ export default function EpicAdventure() {
           width={623}
           height={900}
           alt="comic deadpool & wolverine"
-          className="xs:ml-24 border border-red-700"
+          className="xs:ml-24"
         />
       </div>
       <Image
