@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Hero />
       <main className="flex items-center justify-center">
         <div className="w-[1440px]">
@@ -28,10 +28,10 @@ export default function Home() {
           <Banner />
           <EpicAdventure />
         </div>
-      </main> */}
+      </main>
       <CastList />
       <Gallery />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
