@@ -19,7 +19,7 @@ const Footer = () => {
                     <button className="py-[7px] px-[13px] bg-[#890116] text-white">Subscribe</button>
                 </div>
                 <div className="text-white">
-                    <p className='text-balance tablet:whitespace-normal'>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+                    <p className='text-balance tablet:whitespace-normal 2xs:whitespace-normal'>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
                 </div>
             </div>
             <div className="col-span-1 grid lg:grid-cols-3 tablet:grid-cols-3 xs:grid-cols-2 2xs:grid-cols-1 justify-items-center gap-[40px]  ">

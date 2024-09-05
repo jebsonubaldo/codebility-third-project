@@ -2,8 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import close from "../../public/close.svg";
-import burgerMenu from "../../public/hamburger-menu.svg";
 import assets from "../assets/assets";
 
 
@@ -17,7 +15,7 @@ export function NavBar() {
             <div className="bg-transparent flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <Image className="bg-none" src={assets.navLogo} alt="" />
+                <Image className="bg-none xl:mt-5 xs:mt-0 2xs:mt-0 xs:w-16 2xs:w-14" src={assets.navLogo} alt=""/>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden z-50">
@@ -26,7 +24,7 @@ export function NavBar() {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <Image src={assets.closeIcon} width={30} height={30} alt="logo" />
+                    <Image src={assets.closeIcon} width={30} height={30} alt="logo" className=""/>
                   ) : (
                     <Image
                       src={assets.menuIcon}
@@ -48,17 +46,17 @@ export function NavBar() {
             >
               <ul className="bg-transparent h-screen md:h-auto items-center justify-end md:flex gap-[20px]">
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116]  md:hover:text-[#890116] md:hover:bg-transparent">
-                  <Link href="#about" className="font-rogueFont" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#about" className="font-hero" onClick={() => setNavbar(!navbar)}>
                     HOME
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116]  md:hover:text-[#890116] md:hover:bg-transparent">
-                  <Link href="#blog" className="font-rogueFont" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#blog" className="font-hero" onClick={() => setNavbar(!navbar)}>
                     STORY
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent">
-                  <Link href="#contact" className="font-rogueFont" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#contact" className="font-hero" onClick={() => setNavbar(!navbar)}>
                     WALLPAPERS
                   </Link>
                 </li>
