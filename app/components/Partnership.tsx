@@ -44,7 +44,7 @@ export default function Partnership() {
         alt="Marvel Jesus"
         className="xxs:ml-[2%] xs:ml-[10%] sm:ml-[25%] md:ml-0"
       />
-      <div className="shadow-top-bottom xxs:p-5 lg:p-20 gap-12">
+      <div className="shadow-top-bottom 2xs:p-5 lg:p-20 gap-12">
         <h4 className="flex items-center justify-center lg:text-2xl">
           In partnership with
         </h4>
@@ -62,7 +62,7 @@ export default function Partnership() {
           ))}
         </div>
         {/* Mobile View - Slideshow */}
-        <div className="sm:hidden xxs:ml-32 xxs:mr-32 mt-10">
+        <div className="sm:hidden 2xs:ml-28 2xs:mr-32 mt-10">
           <Swiper
             centeredSlides={true}
             autoplay={{ delay: 1000, disableOnInteraction: false }}
