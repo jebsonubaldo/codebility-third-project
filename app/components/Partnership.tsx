@@ -36,7 +36,7 @@ export default function Partnership() {
   ];
 
   return (
-    <>
+    <div className="bg-black">
       <Image
         src="/img/content-1-img/deadpool.png"
         width={397}
@@ -83,6 +83,6 @@ export default function Partnership() {
           </Swiper>
         </div>
       </div>
-    </>
+    </div>
   );
 }

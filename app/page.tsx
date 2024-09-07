@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Navbar from "./components/NavBar";
-import Hero from "./components/Hero";
+import Navbar from './components/NavBar';
+import Hero from './components/Hero';
 import Partnership from './components/Partnership';
 import Trailer from './components/Trailer';
 import Banner from './components/Banner';
@@ -14,10 +14,12 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <Partnership />
-      <Trailer />
-      <Banner />
-      <EpicAdventure />
+      <div className="bg-black">
+        <Partnership />
+        <Trailer />
+        <Banner />
+        <EpicAdventure />
+      </div>
       <CastList />
       <Gallery />
       <Footer />
