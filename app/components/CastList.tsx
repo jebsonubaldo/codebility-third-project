@@ -48,7 +48,6 @@ export default function CastList() {
             </div>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 my-20 overflow-x-hidden">
-                {/* Adjust the ul to handle mobile scrolling */}
                 <ul role="list" className="flex space-x-4 sm:space-x-8 overflow-x-auto pb-6 no-scrollbar">
                     {currentItems.map((person, index) => (
                         <li key={index} className="flex-none w-48 sm:w-52 relative">
@@ -72,7 +71,6 @@ export default function CastList() {
                 </ul>
             </div>
 
-            {/* Remaining buttons, pagination, etc. stay unchanged */}
             <div className="mx-auto max-w-md text-center">
                 <nav className="flex items-center justify-between px-4 sm:px-0">
                     <div className="-mt-px flex w-0 flex-1">
