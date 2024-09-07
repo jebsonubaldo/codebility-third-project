@@ -37,7 +37,7 @@ const Footer = () => {
                     <h3 className='text-white my-4'>Column Two</h3>
                     <ul>
                         <li className='text-white my-2'><a href="">Link Six</a></li>
-                        <li className='text-white my-2'><a href=""> Link Seven</a></li>
+                        <li className='text-white my-2'><a href="">Link Seven</a></li>
                         <li className='text-white my-2'><a href="">Link Eight</a></li>
                         <li className='text-white my-2'><a href="">Link Nine</a></li>
                         <li className='text-white my-2'><a href="">Link Ten</a></li>

@@ -20,9 +20,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
+
         "2xs": "360px",
         xs: "480px",
         sm: "640px",
+
         // => @media (min-width: 640px) { ... }
         tablet: "810px",
         md: "1024px",
