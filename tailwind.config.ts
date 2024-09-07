@@ -32,7 +32,8 @@ const config: Config = {
 
         lg: "1280px",
         xl :'1440px',
-        '2xl': "1920px"
+        '2xl': "1920px",
+        'desktopHd': { 'raw': '(min-width: 1440px) and (min-height: 900px)' },
         // => @media (min-width: 1280px) { ... }
       },
     },
