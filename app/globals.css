@@ -74,3 +74,19 @@ h3 {
   line-height: 49.44px;
   color: white;
 }
+
+/* Custom scrollbar hiding */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+@media (max-width: 1024px) {
+  .no-scrollbar {
+    overflow-x: hidden;
+  }
+}
