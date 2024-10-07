@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Banner() {
   return (
-    <div className="flex flex-col w-full h-[445px] relative mt-10 pt-96 overflow-hidden bg-black">
+    <div className="content-div flex flex-col w-full h-[445px] relative mt-10 pt-96 overflow-hidden bg-black">
       <div className="absolute 2xs:-bottom-16 xs:-bottom-36 sm:-bottom-52 sm:-right-80 md:-right-48 lg:-bottom-32 lg:right-0 2xl:right-[550px]">
         <Image
           src={'/img/content-2-img/Frame5845.png'}

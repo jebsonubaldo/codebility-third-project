@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Trailer() {
   return (
-    <div className="flex flex-col items-center mt-10 ">
+    <div className="content-div flex flex-col items-center mt-10 ">
       <div className="max-w-4xl text-center">
         <h2 className="text-4xl tracking-tight text-white sm:text-5xl ">
           Official Trailer
