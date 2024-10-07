@@ -11,6 +11,7 @@ export default function Navbar() {
   const [hoveredTwitter, setHoveredTwitter] = useState(false);
   const [hoveredFacebook, setHoveredFacebook] = useState(false);
   const [hoveredLinkedIn, setHoveredLinkedIn] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,10 +28,33 @@ export default function Navbar() {
     };
   }, [scrolled]);
 
-// mobile view
+  useEffect(() => {
+    const sections = ["hero", "story", "gallery"];
+    const observers = sections.map((section) => {
+      const element = document.getElementById(section);
+      if (element) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActiveSection(section);
+            }
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(element);
+        return observer;
+      }
+      return null;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect());
+    };
+  }, []);
+
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    setNavbar(false); 
+    setNavbar(false);
 
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -72,7 +96,7 @@ export default function Navbar() {
           <div className="bg-transparent">
             <div className="bg-transparent flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
-              <Link href="/"  onClick={(e) => handleSmoothScroll(e, "home")}>
+              <Link href="/" onClick={(e) => handleSmoothScroll(e, "hero")}>
                 <Image
                   className="bg-none xl:mt-5 xs:mt-0 2xs:mt-0 xs:w-16 2xs:w-14 !cursor-pointer"
                   src={assets.navLogo}
@@ -113,17 +137,23 @@ export default function Navbar() {
               }`}
             >
               <ul className="bg-transparent h-screen md:h-auto items-center justify-end md:flex gap-[20px] mt-2 ">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116]  md:hover:text-[#890116] md:hover:bg-transparent">
+                <li className={`pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#890116] border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent ${
+                  activeSection === "hero" ? "text-[#890116]" : "text-white"
+                }`}>
                   <Link href="#hero" className="font-hero" onClick={(e) => handleSmoothScroll(e, "hero")}>
                     HOME
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116]  md:hover:text-[#890116] md:hover:bg-transparent">
+                <li className={`pb-6 text-xl py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-[#890116] border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent ${
+                  activeSection === "story" ? "text-[#890116]" : "text-white"
+                }`}>
                   <Link href="#story" className="font-hero" onClick={(e) => handleSmoothScroll(e, "story")}>
                     STORY
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#890116]  border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent">
+                <li className={`pb-6 text-xl py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-[#890116] border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent ${
+                  activeSection === "gallery" ? "text-[#890116]" : "text-white"
+                }`}>
                   <Link href="#gallery" className="font-hero" onClick={(e) => handleSmoothScroll(e, "gallery")}>
                     Gallery
                   </Link>
