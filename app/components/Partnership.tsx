@@ -36,7 +36,7 @@ export default function Partnership() {
   ];
 
   return (
-    <div className="bg-black">
+    <div className="content-div bg-black">
       <Image
         src="/img/content-1-img/deadpool.png"
         width={397}

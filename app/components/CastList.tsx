@@ -39,7 +39,7 @@ export default function CastList() {
     const currentItems = people.slice(currentIndex, currentIndex + VISIBLE_ITEMS);
 
     return (
-        <div className="bg-black relative px-6 py-24 sm:py-32 lg:px-8 overflow-hidden">
+        <div className="content-div bg-black relative px-6 py-24 sm:py-32 lg:px-8 overflow-hidden">
             <div className="mx-auto max-w-4xl text-center">
                 <h3 className="mt-2 text-xl tracking-tight text-white">Full Cast & Crew of</h3>
                 <h2 className="text-4xl tracking-tight text-white sm:text-5xl mt-2">

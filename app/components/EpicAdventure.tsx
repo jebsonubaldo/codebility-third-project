@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function EpicAdventure() {
   return (
-    <div className="relative flex flex-col mt-20 justify-center items-center bg-black">
+    <div id='story'  className="content-div relative flex flex-col mt-20 justify-center items-center bg-black">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl tracking-tight text-white sm:text-5xl">
           The Epic Adventure
