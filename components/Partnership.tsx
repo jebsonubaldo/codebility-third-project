@@ -45,7 +45,7 @@ export default function Partnership() {
         className="xxs:ml-[2%] xs:ml-[10%] sm:ml-[25%] md:ml-0"
       />
       <div className="shadow-top-bottom 2xs:p-5 lg:p-20 gap-12">
-        <h4 className="flex items-center justify-center lg:text-2xl">
+        <h4 className="flex items-center justify-center lg:text-2xl text-white">
           In partnership with
         </h4>
         <div className="hidden sm:flex space-x-4 items-center justify-center mt-10 sm:ml-10">

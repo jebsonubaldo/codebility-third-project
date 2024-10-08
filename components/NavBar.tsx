@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import assets from "../../public/assets/assets";
+import assets from "../public/assets/assets";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function Navbar() {

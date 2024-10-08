@@ -19,10 +19,7 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: #000000;
-}
+
 
 @layer utilities {
   .text-balance {
@@ -68,4 +65,10 @@ h2, h3 {
 h3 {
   line-height: 49.44px;
   color: white;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
 }

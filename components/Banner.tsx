@@ -12,7 +12,7 @@ export default function Banner() {
           className="object-contain 2xs:object-none w-full h-full"
         />
       </div>
-      <div
+      <div 
         className="absolute 2xs:-top-16 xs:-top-36 sm:-top-72 sm:-left-80 md:-left-48 lg:-bottom-36 lg:-left-10
       2xl:left-[550px]"
       >
@@ -25,7 +25,7 @@ export default function Banner() {
         />
       </div>
 
-      <div className="absolute inset-0  ">
+      <div  className="absolute inset-0  ">
         <Image
           src={'/img/content-2-img/movielogo.png'}
           width={324}
@@ -34,6 +34,8 @@ export default function Banner() {
           className="object-none w-full h-full"
         />
       </div>
+
     </div>
+    
   );
 }

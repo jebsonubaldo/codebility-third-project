@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from "react";
-import assets from "../../public/assets/assets";
+import assets from "../public/assets/assets";
 import Image from "next/image";
-import hero from "../../public/assets/bg.jpg";
+import hero from "../public/assets/bg.jpg";
 import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
@@ -34,7 +34,7 @@ const Hero = () => {
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 20,
+            duration: 15,
             ease: "linear",
           },
         },
@@ -45,11 +45,42 @@ const Hero = () => {
     }
   }, [isMobile, controls]);
 
+  // navigation animation
+  const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); // Prevent default button behavior
+    const trailerSection = document.getElementById("trailer");
+    if (trailerSection) {
+      const targetPosition = trailerSection.getBoundingClientRect().top + window.pageYOffset;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1000; // duration of scroll in ms
+      let start: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      const ease = (t: number, b: number, c: number, d: number) => {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      };
+
+      requestAnimationFrame(animation);
+    }
+};
+
+
   return (
     <div
       id="hero"
       ref={containerRef}
-      className="content-div relative w-full flex md:items-end 2xs:bg-[20%] 2xs:items-center bg-center bg-cover z-0 min-h-[170vh] 2xs:min-h-[160vh] xl:min-h-[130vh] desktopHd:min-h-[120vh] bg-no-repeat overflow-hidden xl:bg-top"
+      className="content-div relative w-full flex md:items-end 2xs:bg-[20%] 2xs:items-center bg-center bg-cover z-0 lg:min-h-[170vh] 2xs:max-h-[130vh] xl:min-h-[170vh] desktopHd:min-h-[120vh] bg-no-repeat overflow-hidden xl:bg-top"
     >
       {isMobile ? (
         <motion.div
@@ -93,15 +124,15 @@ const Hero = () => {
               <button className="min-w-[244px] xs:min-w-[300px]  bg-[#890116] text-white font-bold py-[15px] md:py-[25px] px-[20px] rounded-[40px] xs:text-[1.4rem] md:text-[1rem]">
                 Avail your Tickets now
               </button>
-              <button className="min-w-[244px] xs:min-w-[300px] text-white font-bold py-[12px]  md:py-[25px] px-[20px] border-2 border-[#890116] rounded-[40px] hover:bg-[#890116] transition duration-300 ease-in-out xs:text-[1.4rem] md:text-[1rem]">
+              <button onClick={scrollToSection} className="min-w-[244px] xs:min-w-[300px] text-white font-bold py-[12px]  md:py-[25px] px-[20px] border-2 border-[#890116] rounded-[40px] hover:bg-[#890116] transition duration-300 ease-in-out xs:text-[1.4rem] md:text-[1rem]">
                 Watch Trailer
               </button>
             </div>
           </div>
-          <div className=" col-span-1 flex justify-center tablet:justify-end z-40">
+          <div className="hidden col-span-1 md:flex justify-center tablet:justify-end z-40">
             <Image
               src={assets.hero}
-              className=" h-[300px] hidden md:block md:w-[480px] md:h-[901px] desktopHd:w-full xl:w-[550px] absolute bottom-0 right-0"
+              className=" h-[300px]  md:w-[480px] md:h-[901px] absolute bottom-0 right-0"
               alt=""
             />
           </div>
