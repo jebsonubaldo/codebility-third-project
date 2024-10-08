@@ -21,10 +21,13 @@ export default function CastList() {
     // Adjust visible items based on the screen size
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 640) {
-                setVisibleItems(3);  // Show 3 items for small screens
-            } else {
-                setVisibleItems(5);  // Show 5 items for larger screens
+            const newVisibleItems = window.innerWidth < 640 ? 3 : 5;
+            setVisibleItems(newVisibleItems);
+
+            // Adjust the current index if the currentIndex exceeds total pages after resize
+            const newTotalPages = Math.ceil(people.length / newVisibleItems);
+            if (currentIndex >= newTotalPages) {
+                setCurrentIndex(newTotalPages - 1);
             }
         };
 
@@ -38,7 +41,7 @@ export default function CastList() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [currentIndex]);
 
     const totalPages = Math.ceil(people.length / visibleItems);
 
