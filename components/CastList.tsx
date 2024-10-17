@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/20/solid';
 
@@ -14,11 +14,36 @@ const people = [
     { name: 'Wesley Snipes', character: 'Blade', source: '/images/blade.jpg' },
 ];
 
-const VISIBLE_ITEMS = 5;
-
 export default function CastList() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = people.length;
+    const [visibleItems, setVisibleItems] = useState(5);
+
+    // Adjust visible items based on the screen size
+    useEffect(() => {
+        const handleResize = () => {
+            const newVisibleItems = window.innerWidth < 640 ? 3 : 5;
+            setVisibleItems(newVisibleItems);
+
+            // Adjust the current index if the currentIndex exceeds total pages after resize
+            const newTotalPages = Math.ceil(people.length / newVisibleItems);
+            if (currentIndex >= newTotalPages) {
+                setCurrentIndex(newTotalPages - 1);
+            }
+        };
+
+        // Set the initial state
+        handleResize();
+
+        // Add event listener for resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [currentIndex]);
+
+    const totalPages = Math.ceil(people.length / visibleItems);
 
     const handleNext = () => {
         if (currentIndex < totalPages - 1) {
@@ -36,7 +61,7 @@ export default function CastList() {
         setCurrentIndex(index);
     };
 
-    const currentItems = people.slice(currentIndex, currentIndex + VISIBLE_ITEMS);
+    const currentItems = people.slice(currentIndex * visibleItems, (currentIndex + 1) * visibleItems);
 
     return (
         <div className="content-div bg-black relative px-6 py-24 sm:py-32 lg:px-8 overflow-hidden">
@@ -112,6 +137,5 @@ export default function CastList() {
                 className="absolute bottom-0 right-0 w-560 h-18"
             />
         </div>
-
     );
 }
