@@ -19,10 +19,7 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: #000000;
-}
+
 
 @layer utilities {
   .text-balance {
@@ -84,4 +81,10 @@ h3 {
   .no-scrollbar {
     overflow-x: hidden;
   }
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
 }
