@@ -19,7 +19,7 @@ const images = [
 
 export default function Gallery() {
     return (
-        <div className="bg-black py-20">
+        <div id="gallery" className="content-div bg-black py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-4xl tracking-tight text-white sm:text-5xl py-12">Gallery</h2>
