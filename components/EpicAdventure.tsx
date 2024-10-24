@@ -3,14 +3,14 @@ import React from 'react';
 
 export default function EpicAdventure() {
   return (
-    <div className="relative flex flex-col mt-20 justify-center items-center">
+    <div id='story' className="content-div relative flex flex-col mt-20 justify-center items-center bg-black" style={{ paddingTop: '130px', marginTop: '-80px' }}>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl tracking-tight text-white sm:text-5xl">
           The Epic Adventure
         </h2>
       </div>
-      <div className="flex flex-col md:flex-row">
-        <div className="lg:w-[676px] p-6 lg:mt-44 leading-9 font-normal">
+      <div className="flex flex-col lg:flex-row text-white justify-center items-center">
+        <div className="lg:w-[676px] p-6 leading-9 font-normal">
           <p className="sm:text-xl md:text-2xl font-normal">
             In Deadpool X Wolverine, the merc with a mouth teams up with the
             clawed mutant in an adventure like no other. With action, humor, and
@@ -30,7 +30,7 @@ export default function EpicAdventure() {
           width={623}
           height={900}
           alt="comic deadpool & wolverine"
-          className="xs:ml-24"
+          className=" lg:pt-36"
         />
       </div>
       <Image

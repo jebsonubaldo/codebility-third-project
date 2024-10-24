@@ -19,10 +19,10 @@ const images = [
 
 export default function Gallery() {
     return (
-        <div className="bg-black py-20">
+        <div id="gallery" className="content-div bg-black py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-4xl tracking-tight text-white sm:text-5xl py-12" >Gallery</h2>
+                    <h2 className="text-4xl tracking-tight text-white sm:text-5xl py-12">Gallery</h2>
                 </div>
 
                 <div className="mx-auto max-w-3xl lg:mx-0">
@@ -36,8 +36,13 @@ export default function Gallery() {
                     className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
                 >
                     {images.map((image) => (
-                        <li key={image.title}>
-                            <img className=" h-full w-full rounded-2xl object-cover" src={image.source} alt="" />
+                        <li key={image.title} className="relative group overflow-hidden">
+                            <img
+                                className="h-full w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-105"
+                                src={image.source}
+                                alt={image.title}
+                            />
+                            <div className="absolute inset-0 before:content-[''] before:absolute before:left-1/2 before:top-0 before:w-[200%] before:h-0 before:bg-gradient-to-b before:from-transparent before:to-white before:opacity-40 before:rounded-bl-full before:rounded-br-full before:transition-all before:duration-700 before:scale-x-50 before:transform before:-translate-x-1/2 group-hover:before:h-full group-hover:before:scale-x-100"></div>
                         </li>
                     ))}
                 </ul>
@@ -49,7 +54,6 @@ export default function Gallery() {
                         Visit Gallery
                     </a>
                 </div>
-
             </div>
         </div>
     )
