@@ -1,14 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
-import assets from '../assets/assets'
+import assets from '../public/assets/assets'
 
 
 const Footer = () => {
   return (
-    <div className='bg-[#000000] flex justify-center items-center lg:p-[64px] 2xs:p-[20px] '>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-[24px] lg:p-[48px] 2xs:p-[20px] rounded-[14px] border-2 border-[#890116] ">
-            <div className="col-span-1 flex flex-col gap-[12px] lg:p-[40px] 2xs:p-0 tablet:px-[70px]">
-                <div className="flex lg:justify-start xs:justify-center  2xs:justify-center ">
+    <div className='content-div bg-[#000000] flex justify-center items-center 2xs:p-[20px] my-[70px]'>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-[24px] lg:p-[70px] xl:py-[70px] 2xs:p-[20px] rounded-[14px] border-2 border-[#890116] ">
+         {/* column 1 */}
+            <div className="col-span-1 flex flex-col gap-[12px] lg:p-[40px] 2xs:p-0 tablet:px-[70px] space-y-3 ">
+                <div className="flex justify-center lg:justify-start ">
                     <Image className='' src={assets.navLogo} alt="" />
                 </div>
                 <div className="">
@@ -22,6 +24,7 @@ const Footer = () => {
                     <p className='text-balance tablet:whitespace-normal 2xs:whitespace-normal'>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
                 </div>
             </div>
+
             <div className="col-span-1 grid lg:grid-cols-3 tablet:grid-cols-3 xs:grid-cols-2 2xs:grid-cols-1 justify-items-center gap-[40px]  ">
                 <div className="col-span-1 ">
                     <h3 className='text-white my-4'>Column One</h3>
