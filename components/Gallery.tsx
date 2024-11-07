@@ -1,18 +1,18 @@
 const images = [
     {
-        title: 'IMG_4985.HEIC',
+        title: 'gallery-1',
         source: '/images/gallery-1.png'
     },
     {
-        title: 'IMG_4985.HEIC',
+        title: 'gallery-2',
         source: '/images/gallery-2.png'
     },
     {
-        title: 'IMG_4985.HEIC',
+        title: 'gallery-3',
         source: '/images/gallery-3.png'
     },
     {
-        title: 'IMG_4985.HEIC',
+        title: 'gallery-4',
         source: '/images/gallery-4.png'
     },
 ]
