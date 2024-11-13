@@ -94,12 +94,14 @@ export default function Navbar() {
       >
         <div className="bg-transparent justify-between px-4 mx-auto lg:max-w-[93%] md:items-center md:flex md:px-8">
           <div className="bg-transparent">
-            <div className="bg-transparent flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="bg-transparent flex items-center justify-between py-3 md:py-5 md:block !cursor-pointer">
               {/* LOGO */}
               <Link href="/" onClick={(e) => handleSmoothScroll(e, "hero")}>
                 <Image
-                  className="bg-none xl:mt-5 xs:mt-0 2xs:mt-0 xs:w-16 2xs:w-14 !cursor-pointer"
+                  className="bg-none xl:mt-5 xs:mt-0 2xs:mt-0 w-[80px] 2xs:w-[70px] "
                   src={assets.navLogo}
+                  height={150}
+                  width={150}
                   alt=""
                 />
               </Link>
@@ -115,7 +117,7 @@ export default function Navbar() {
                       width={30}
                       height={30}
                       alt="logo"
-                      className=""
+                      className="2xs:!w-6"
                     />
                   ) : (
                     <Image
@@ -123,7 +125,7 @@ export default function Navbar() {
                       width={30}
                       height={30}
                       alt="logo"
-                      className="focus:border-none active:border-none"
+                      className="focus:border-none active:border-none 2xs:!w-6"
                     />
                   )}
                 </button>
