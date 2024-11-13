@@ -25,11 +25,19 @@ const Hero = () => {
   useEffect(() => {
     if (isMobile && containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
-      const imageWidth = containerWidth * 2; // The background image is set to 200% width
-      const animationDistance = imageWidth - containerWidth;
-      const duration = window.innerWidth <= 479 ? 8 : 15;
+      let imageWidth = containerWidth * 1.94; // Base width multiplier
+      let animationDistance = imageWidth - containerWidth;
+      let duration = window.innerWidth <= 320 ? 0 : 13; // Disable for 320px
+  
+      // Special settings for exactly 320px
+      if (window.innerWidth === 320) {
+        imageWidth = containerWidth * 1.95 // Adjust width multiplier
+        animationDistance = imageWidth - containerWidth;
+        duration = 7; // Slow down animation for smoother effect
+      }
+  
       controls.start({
-        x: [-0, -animationDistance],
+        x: [0, -animationDistance],
         transition: {
           x: {
             repeat: Infinity,
@@ -41,19 +49,20 @@ const Hero = () => {
       });
     } else {
       controls.stop();
-      controls.set({ x: 0 }); // Reset position for large screens
+      controls.set({ x: 0 });
     }
   }, [isMobile, controls]);
+  
 
   // navigation animation
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); // Prevent default button behavior
+    e.preventDefault(); 
     const trailerSection = document.getElementById("trailer");
     if (trailerSection) {
       const targetPosition = trailerSection.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 1000; // duration of scroll in ms
+      const duration = 800; 
       let start: number | null = null;
 
       const animation = (currentTime: number) => {
@@ -88,7 +97,7 @@ const Hero = () => {
           className="absolute inset-0 w-[200%] h-full"
           style={{
             backgroundImage: `url(${hero.src})`,
-            backgroundSize: " 100%",
+            backgroundSize: " cover",
             backgroundRepeat: "repeat-x",
           }}
         />
