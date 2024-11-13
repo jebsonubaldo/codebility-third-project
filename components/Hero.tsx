@@ -27,14 +27,14 @@ const Hero = () => {
       const containerWidth = containerRef.current.offsetWidth;
       const imageWidth = containerWidth * 2; // The background image is set to 200% width
       const animationDistance = imageWidth - containerWidth;
-
+      const duration = window.innerWidth <= 479 ? 8 : 15;
       controls.start({
         x: [-0, -animationDistance],
         transition: {
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 15,
+            duration: duration,
             ease: "linear",
           },
         },
@@ -120,11 +120,11 @@ const Hero = () => {
               Don't miss the epic team-up of the year - grab your tickets now
               for the blockbuster event everyone is talking about!
             </p>
-            <div className="flex flex-col tablet:flex-row  gap-[20px] md:gap-[40px] mt-[20px] xs:flex-col xs:justify-center xs:mt-[3rem]">
-              <button className="min-w-[244px] xs:min-w-[300px]  bg-[#890116] text-white font-bold py-[15px] md:py-[25px] px-[20px] rounded-[40px] xs:text-[1.4rem] md:text-[1rem]">
+            <div className="flex flex-col tablet:flex-row  gap-3 mt-[20px] xs:flex-col xs:justify-center xs:mt-[3rem] md:justify-center">
+              <button className=" xs:min-w-[300px] md:!min-w-[200px] lg:!min-w-[300px] bg-[#890116] text-white font-bold py-[15px] md:py-[15px] px-[20px] md:!px-[10px] lg:!py-[20px] rounded-[40px] xs:text-[1.4rem] md:!text-[16px] lg:!text-xl">
                 Avail your Tickets now
               </button>
-              <button onClick={scrollToSection} className="min-w-[244px] xs:min-w-[300px] text-white font-bold py-[12px]  md:py-[25px] px-[20px] border-2 border-[#890116] rounded-[40px] hover:bg-[#890116] transition duration-300 ease-in-out xs:text-[1.4rem] md:text-[1rem]">
+              <button onClick={scrollToSection} className="xs:min-w-[300px] md:!min-w-[200px] lg:!min-w-[300px] text-white font-bold py-[12px]  md:py-[10px] px-[20px] md:!px-[10px] border-2 border-[#890116] rounded-[40px] hover:bg-[#890116] transition duration-300 ease-in-out xs:text-[1.4rem] md:!text-[16px] lg:!text-xl">
                 Watch Trailer
               </button>
             </div>
@@ -132,7 +132,7 @@ const Hero = () => {
           <div className="hidden col-span-1 md:flex justify-center tablet:justify-end z-40">
             <Image
               src={assets.hero}
-              className=" h-[300px]  md:w-[480px] md:h-[901px] absolute bottom-0 right-0"
+              className=" h-[300px]  md:w-[420px] md:h-[680px] lg:min-w-[530px] lg:min-h-[1000px] absolute bottom-0 right-0"
               alt=""
             />
           </div>

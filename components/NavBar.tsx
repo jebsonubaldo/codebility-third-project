@@ -136,7 +136,7 @@ export default function Navbar() {
                 navbar ? "p-12 md:p-0 block !bg-[#000000]" : "hidden"
               }`}
             >
-              <ul className="bg-transparent h-screen md:h-auto items-center justify-end md:flex gap-[20px] mt-2 ">
+              <ul className="bg-transparent h-screen md:h-auto items-center justify-end md:flex gap-[20px] md:gap-[10px] mt-2 ">
                 <li className={`pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#890116] border-[#890116] md:hover:text-[#890116] md:hover:bg-transparent ${
                   activeSection === "hero" ? "text-[#890116]" : "text-white"
                 }`}>
@@ -159,7 +159,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="ml-7">
-                  <div className="lg:ml-[5rem] flex sm:justify-center sm:ml-0 sm:mt-[30px] xs:justify-center xs:ml-0 xs:mt-[30px] lg:mt-0 lg:justify-between items-center mb-4 2xs:justify-center 2xs:ml-0 2xs:mt-[30px]">
+                  <div className="md:mx-8 lg:mx-0 md:pb-2 lg:pb-0 md:!ml-[2rem] lg:ml-[5rem] flex sm:justify-center sm:ml-0 sm:mt-[30px] xs:justify-center xs:ml-0 xs:mt-[30px] lg:mt-0 lg:justify-between items-center mb-4 2xs:justify-center 2xs:ml-0 2xs:mt-[30px]">
                     <ul className="flex gap-[3rem] mb-7 lg:mr-16">
                       {/* Twitter Icon */}
                       <li>
