@@ -42,7 +42,7 @@ export default function Partnership() {
         width={397}
         height={171}
         alt="Marvel Jesus"
-        className="xxs:ml-[2%] xs:ml-[10%] sm:ml-[25%] md:ml-0"
+        className="w-auto h-auto xxs:ml-[2%] xs:ml-[10%] sm:ml-[25%] md:ml-0"
       />
       <div className="shadow-top-bottom 2xs:p-5 lg:p-20 gap-12">
         <h4 className="flex items-center justify-center lg:text-2xl text-white">
@@ -54,9 +54,10 @@ export default function Partnership() {
               <Image
                 src={image.src}
                 alt={`Logo ${index + 1}`}
+                style={{ width: 'auto', height: '100px' }}
                 width={image.width}
                 height={image.height}
-                className="object-contain m-4"
+                className="w-auto h-auto object-contain m-4"
               />
             </div>
           ))}
@@ -74,9 +75,11 @@ export default function Partnership() {
                 <Image
                   src={image.src}
                   alt={`Logo ${index + 1}`}
+                  style={{ width: 'auto', height: '90px' }}
                   width={image.width}
                   height={image.height}
-                  className="object-contain "
+                  priority
+                  className="w-auto h-auto object-contain"
                 />
               </SwiperSlide>
             ))}

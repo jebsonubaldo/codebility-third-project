@@ -8,8 +8,8 @@ export default function Trailer() {
           Official Trailer
         </h2>
       </div>
-      <div className="w-[959]">
-        <p className="xxs:text-base xs:text-lg sm:text-3xl lg:text-4xl xxs:mt-10 lg:mt-24">
+      <div className="xl:w-[959px] lg:w-[859px] md:w-[759px] sm:w-[659px]  ">
+        <p className="xxs:text-base xs:text-lg sm:text-3xl lg:text-4xl xxs:mt-10 lg:mt-11">
           Watch the official Trailer for Deadpool X Wolverine
         </p>
         <div className="relative" style={{ paddingBottom: '56.25%' }}>

@@ -3,7 +3,11 @@ import React from 'react';
 
 export default function EpicAdventure() {
   return (
-    <div id='story' className="content-div relative flex flex-col mt-20 justify-center items-center bg-black" style={{ paddingTop: '130px', marginTop: '-80px' }}>
+    <div
+      id="story"
+      className="content-div relative flex flex-col mt-20 justify-center items-center bg-black"
+      style={{ paddingTop: '130px', marginTop: '-80px' }}
+    >
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl tracking-tight text-white sm:text-5xl">
           The Epic Adventure
@@ -30,7 +34,7 @@ export default function EpicAdventure() {
           width={623}
           height={900}
           alt="comic deadpool & wolverine"
-          className=" lg:pt-36"
+          className="lg:pt-36 w-auto h-auto"
         />
       </div>
       <Image
